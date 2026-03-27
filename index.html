@@ -187,13 +187,19 @@ function verificar() {
   var input = document.getElementById("codigo").value;
 
   if(input == "29") {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("web").style.display = "block";
+    document.getElementById("login").style.opacity = "0";
+
+setTimeout(() => {
+  document.getElementById("login").style.display = "none";
+  document.getElementById("web").style.display = "block";
+}, 800);
   } else {
-    alert("Incorrecto 😏");
+    alert("Incorrectoooo");
   }
 }
 </script>
-
+<audio autoplay loop>
+  <source src="musica.mp3.mp3" type="audio/mpeg">
+</audio>
 </body>
 </html>
