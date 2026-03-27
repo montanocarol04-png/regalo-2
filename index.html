@@ -109,32 +109,33 @@ section {
   width: 100%;
   border-radius: 15px;
 }
+
+/* CONTENEDOR */
 .contenedor {
   position: relative;
 }
 
+/* IMAGEN PRINCIPAL */
+.img-principal {
+  width: 250px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* TEXTO ENCIMA */
 .titulo {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 28px;
-  text-shadow: 0 5px 15px rgba(0,0,0,0.4);
-  animation: aparecer 2s ease;
-}
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -80%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
+  font-size: 32px;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.7);
+  z-index: 2;
 }
 </style>
+
 </head>
 
 <body>
