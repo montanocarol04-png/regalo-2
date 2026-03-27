@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para ti 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  scroll-behavior: smooth;
+}
+
+/* LOGIN */
+#login {
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd6e0, #ffeaf2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  text-align: center;
+}
+
+.fotos {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.foto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 3px solid white;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #ff8fab;
+  color: white;
+}
+
+/* WEB OCULTA */
+#web {
+  display: none;
+}
+
+/* SECCIONES */
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.rosa {
+  background: #ffd6e0;
+}
+
+.blanco {
+  background: #fff;
+}
+
+/* FOTO PRINCIPAL */
+.img-principal {
+  width: 250px;
+  border-radius: 20px;
+}
+
+/* CARTA */
+.carta {
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* GALERÍA */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 400px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <div class="login-box">
+
+    <div class="fotos">
+      <img src="CAMBIA_AQUI_TU_FOTO.jpg" class="foto">
+      <img src="CAMBIA_AQUI_SU_FOTO.jpg" class="foto">
+    </div>
+
+    <h2>Introduce el código si me amas 😏</h2>
+
+    <input type="password" id="codigo">
+    <br><br>
+    <button onclick="verificar()">Entrar</button>
+
+  </div>
+</div>
+
+<!-- WEB -->
+<div id="web">
+
+<section class="rosa">
+  <img src="CAMBIA_AQUI_FOTO_PRINCIPAL.jpg" class="img-principal">
+</section>
+
+<section class="blanco">
+  <div class="carta">
+    CAMBIA_AQUI_CARTA_PARTE_1
+  </div>
+</section>
+
+<section class="rosa">
+  <div class="carta">
+    CAMBIA_AQUI_CARTA_PARTE_2
+  </div>
+</section>
+
+<section class="blanco">
+  <div class="galeria">
+    <img src="foto1.jpg">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
+  </div>
+</section>
+
+</div>
+
+<!-- MÚSICA -->
+<audio autoplay loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function verificar() {
+  var input = document.getElementById("codigo").value;
+
+  if(input == "29") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("web").style.display = "block";
+  } else {
+    alert("Incorrecto 😏");
+  }
+}
+</script>
+
+</body>
+</html>
