@@ -178,8 +178,8 @@ Te amo muchísimo mi hombre y ojalá futuro esposo 🩷
 </div>
 
 <!-- MÚSICA -->
-<audio autoplay loop>
-  <source src="musica.mp3" type="audio/mpeg">
+<audio id="musica" loop>
+  <source src="musica.mp3.mp3" type="audio/mpeg">
 </audio>
 
 <script>
@@ -192,7 +192,7 @@ function verificar() {
 setTimeout(() => {
   document.getElementById("login").style.display = "none";
   document.getElementById("web").style.display = "block";
-}, 800);
+document.getElementById("musica").play();}, 800);
   } else {
     alert("Incorrectoooo");
   }
